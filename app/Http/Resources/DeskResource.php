@@ -23,7 +23,6 @@ class DeskResource extends JsonResource
             'created_at' => $this->created_at,
             'lists' => DeskListResource::collection($this->lists),
 
-
         ];
 
 

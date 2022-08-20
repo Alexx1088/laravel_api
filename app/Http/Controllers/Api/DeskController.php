@@ -13,18 +13,18 @@ class DeskController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function index()
     {
-        return DeskResource::collection(Desk::with('lists')->get());
+              return DeskResource::collection(Desk::with('lists')->get());
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return DeskResource
      */
     public function store(DeskStoreRequest $request)
     {
@@ -37,7 +37,7 @@ class DeskController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return DeskResource
      */
     public function show($id)
     {
