@@ -18,4 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResources(['desks' => \App\Http\Controllers\Api\DeskController::class, 'index']);
+ Route::apiResources(['desks' => \App\Http\Controllers\Api\V1\DeskController::class,
+ 'index']);
