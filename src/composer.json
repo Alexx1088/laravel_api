@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.5",
         "league/flysystem-sftp": "~1.0",
         "nao-pon/flysystem-google-drive": "~1.1",
+        "phpoffice/phpword": "^0.18.3",
         "predis/predis": "^2.0",
         "stechstudio/laravel-zipstream": "^4.8"
     },
