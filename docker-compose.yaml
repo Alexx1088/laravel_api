@@ -1,0 +1,74 @@
+version: '3.7'
+
+services:
+  os: 
+    container_name: os-ubuntu
+    image: ubuntu:20.04
+
+  webserver:
+    container_name: webserver-nginx
+    image: nginx:1.23.1
+    restart: always
+    volumes:
+      - ./src/:/var/www/example-app
+      - ./docker/etc/nginx/conf.d:/etc/nginx/conf.d/
+      - ./docker/var/www/certbot:/var/www/certbot
+      - ./docker/etc/nginx/ssl/:/etc/nginx/ssl/
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - application
+
+  certbot:
+    container_name: certificate-certbot
+    image: webdevops/certbot
+    volumes:
+      - ./docker/var/www/certbot:/var/www/certbot/
+      - ./docker/etc/letsencrypt/:/etc/letsencrypt/
+
+  application:
+    build:
+      context: .
+      dockerfile: DockerFile
+    volumes:
+      - ./src/:/var/www/example-app
+    container_name: application-php
+    depends_on:
+      - database
+
+  database:
+    container_name: database-mysql
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - ./docker/var/lib/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: example-app
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: example-app
+      MYSQL_PASSWORD: example-app
+    ports:
+      - 8101:3306
+    command: --default-authentication-plugin=mysql_native_password
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      PMA_HOST: database-mysql
+
+  search-engine:
+    container_name: search-engine-elasticsearch
+    image: elasticsearch:6.8.1
+    ports:
+      - 9200:9200
+
+  cache:
+    container_name: cache-redis
+    image: redis:7.0
+    ports:
+      - 6379:6379
