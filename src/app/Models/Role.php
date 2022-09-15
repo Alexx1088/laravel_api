@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Google\Service\Dfareporting\UserRole;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +12,6 @@ class Role extends Model
 
 	public function permissions()
 	{
-		return $this->hasMany(Permission::class, 'roles_permissions');
+		return $this->hasMany(UserRole::class, 'role_id', 'id');
 	}
 }
