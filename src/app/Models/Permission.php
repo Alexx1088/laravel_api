@@ -9,9 +9,20 @@ class Permission extends Model
 {
     use HasFactory;
 
-    public function permissions()
+    protected $table = 'permissions';
+
+    protected $table = [
+        'slug',
+        'name'
+    ];
+
+    public function users()
     {
-       return $this->hasMany(UsersPermission::class, 'permissions_id','id');
+       return $this->belongsToMany(User::class, 'users_permissions');
     }
 
+    public function roles()
+    {
+       return $this->belongsToMany(Role::class, 'roles_permissions');
+    }
 }
