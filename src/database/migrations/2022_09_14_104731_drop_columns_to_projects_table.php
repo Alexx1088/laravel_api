@@ -14,8 +14,7 @@ class DropColumnsToProjectsTable extends Migration
     public function up()
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->dropColumn('re-examination');
-            $table->dropColumn('branch of legislation');
+            $table->dropColumn('job_title_kz');
         });
     }
 
@@ -27,8 +26,7 @@ class DropColumnsToProjectsTable extends Migration
     public function down()
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->string('re_examination');
-            $table->string('branch_of_legislation');
+            //
         });
     }
 }

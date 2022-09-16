@@ -24,18 +24,20 @@ class ProjectStoreRequest extends FormRequest
     public function rules()
     {
         return [
+
             're_examination' => 'required|string',
-            'incoming_letter_number' => 'required|digits:30',
-            'outgoing_letter_number' => 'required|digits:30',
-            'date_of_outgoing_letter' => 'required|date',
-            'Date_of_receipt_project_legal act' => 'required|date',
+            'incoming_letter_number' => 'required|integer',
+            'outgoing_letter_number' => 'required|integer',
+          'date_of_outgoing_letter' => 'required|date',
+            'date_of_receipt_project_legal_act' => 'required|date',
             'document_type' => 'nullable',
             'branch_of_legislation' => 'required|string',
-            'number_of_pages' => 'required|digits:3',
+            'number_of_pages' => 'required|integer',
             'dev_group' => 'required|string',
             'email' => 'required|email',
             'comment' => 'required|string',
-            'phone' => 'required|digits:15',
+            'phone' => 'required|integer',
+
         ];
     }
 }

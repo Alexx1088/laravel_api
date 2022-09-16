@@ -14,7 +14,7 @@ class Project extends Model
         'incoming_letter_number',
         'outgoing_letter_number',
         'date_of_outgoing_letter',
-        'date_of_receipt_project_legal act',
+        'date_of_receipt_project_legal_act',
         'document_type',
         'branch_of_legislation',
         'number_of_pages',

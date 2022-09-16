@@ -19,7 +19,7 @@ class CreateAddProjectsTable extends Migration
             $table->integer('incoming_letter_number');
             $table->integer('outgoing_letter_number');
             $table->dateTime('date_of_outgoing_letter');
-            $table->dateTime('date_of_receipt_project_legal act');
+            $table->dateTime('date_of_receipt_project_legal_act');
             $table->string('document_type');
             $table->string('project_act_name_rus');
             $table->string('project_act_name_kaz');

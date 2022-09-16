@@ -24,7 +24,8 @@ Route::group(['namespace' => 'API'], function () {
 		Route::get('uploads', 'UploadController@index');
 		Route::post('uploads', 'UploadController@store');
 
-     Route::post('projects', 'ProjectController@store');
+    // Route::post('projects', 'ProjectController@store');
+
 
 		Route::group(['middleware' => 'auth:sanctum'], function () {
 	   		
@@ -36,8 +37,8 @@ Route::group(['namespace' => 'API'], function () {
 			Route::put('users/{user}', 'ProjectController@update')->middleware(['permission:users-update']);
 			Route::delete('users/{user}', 'ProjectController@destroy')->middleware(['permission:users-destroy']);
 
-
-
+             // Projects
+            Route::post('projects', 'ProjectController@store');
 
 
 		});
