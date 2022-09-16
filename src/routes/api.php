@@ -24,8 +24,6 @@ Route::group(['namespace' => 'API'], function () {
 		Route::get('uploads', 'UploadController@index');
 		Route::post('uploads', 'UploadController@store');
 
-    // Route::post('projects', 'ProjectController@store');
-
 
 		Route::group(['middleware' => 'auth:sanctum'], function () {
 	   		
