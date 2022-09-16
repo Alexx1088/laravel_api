@@ -24,7 +24,7 @@ class ProjectResource extends JsonResource
             'date_of_outgoing_letter' => $this->date_of_outgoing_letter,
             'date_of_receipt_project_legal act' => $this->date_of_receipt_project_legal_act,
             'document_type' => $this->document_type,
-            'branch of legislation' => $this->branch_of_legislation,
+            'branch_of_legislation' => $this->branch_of_legislation,
             'number_of_pages' => $this->number_of_pages,
             'dev_group' => $this->dev_group,
             'email' => $this->email,
