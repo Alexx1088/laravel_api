@@ -24,13 +24,17 @@ Route::group(['namespace' => 'API'], function () {
 		Route::get('uploads', 'UploadController@index');
 		Route::post('uploads', 'UploadController@store');
 
+     Route::post('users', 'ProjectController@store');
+
+
 		Route::group(['middleware' => 'auth:sanctum'], function () {
 	   		
 	   		//	Users
 
 			Route::get('users', 'ProjectController@index')->middleware(['permission:users-index']);
 			Route::get('users/{user}', 'ProjectController@show')->middleware(['permission:users-show']);
-			Route::post('users', 'ProjectController@store')->middleware(['permission:users-store']);
+		//	Route::post('users', 'ProjectController@store')->middleware
+            //(['permission:users-store']);
 			Route::put('users/{user}', 'ProjectController@update')->middleware(['permission:users-update']);
 			Route::delete('users/{user}', 'ProjectController@destroy')->middleware(['permission:users-destroy']);
 
