@@ -13,7 +13,7 @@ class CreateAddProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('add__projects', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('re-examination');
             $table->integer('incoming_letter_number');
