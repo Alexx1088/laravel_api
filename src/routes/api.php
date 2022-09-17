@@ -36,6 +36,7 @@ Route::group(['namespace' => 'API'], function () {
 
              // Projects
            Route::post('projects', 'ProjectController@store');
+           Route::get('projects', 'ProjectController@index');
 
 
 		});

@@ -11,7 +11,7 @@ class ProjectController extends Controller
 {
 	public function index()
 	{
-
+return response()->json(ProjectResource::collection(Project::all()), 200);
 	}
 
 	public function show()
@@ -21,7 +21,7 @@ class ProjectController extends Controller
 
 	public function store(ProjectStoreRequest $request)
 	{
-     //   $created_project = Project::create($request->validated());
+
   Project::create($request->validated());
 
         return response()->json(ProjectResource::collection(Project::all()), 201);
