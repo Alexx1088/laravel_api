@@ -28,7 +28,7 @@ class ProjectStoreRequest extends FormRequest
             're_examination' => 'required|string',
             'incoming_letter_number' => 'required|integer',
             'outgoing_letter_number' => 'required|integer',
-          'date_of_outgoing_letter' => 'required|date',
+            'date_of_outgoing_letter' => 'required|date',
             'date_of_receipt_project_legal_act' => 'required|date',
             'document_type' => 'nullable',
             'branch_of_legislation' => 'required|string',
