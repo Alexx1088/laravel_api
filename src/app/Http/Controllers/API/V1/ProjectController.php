@@ -7,6 +7,8 @@ use App\Http\Requests\V1\ProjectStoreRequest;
 use App\Http\Resources\V1\ProjectResource;
 use App\Models\Project;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
 {
@@ -23,7 +25,13 @@ class ProjectController extends Controller
     public function store(ProjectStoreRequest $request)
     {
 
+        $request->validate([
+
+            'locale' => ['required', Rule::in(['kk', 'ru', 'en']),],
+        ]);
+
         Project::create($request->validated());
+
 
         return response()->json(ProjectResource::collection(Project::all()), 201);
 
