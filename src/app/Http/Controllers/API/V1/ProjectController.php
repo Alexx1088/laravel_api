@@ -37,13 +37,10 @@ class ProjectController extends Controller
 
     }
 
-    public
-    function destroy(Project $project, ProjectStoreRequest $request)
+    public function destroy(Project $project/*, ProjectStoreRequest $request*/)
     {
         $project->delete();
 
-        return response(null, \Illuminate\Http\Response::HTTP_NO_CONTENT);
-
-      //  return response()->json(null, 204);
+         return response()->json(null, 204);
     }
 }

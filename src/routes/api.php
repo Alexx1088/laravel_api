@@ -39,6 +39,7 @@ Route::group(['namespace' => 'API'], function () {
            Route::get('projects', 'ProjectController@index');
            Route::get('projects/{id}', 'ProjectController@show');
            Route::put('projects/{project}', 'ProjectController@update');
+           Route::delete('projects/{project}', 'ProjectController@destroy');
 
 
 		});
