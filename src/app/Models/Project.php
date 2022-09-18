@@ -23,5 +23,18 @@ class Project extends Model
         'email',
         'comment',
         'phone',
+        'locale',
+        'project_act_name_rus',
+        'project_act_name_kaz',
+        'purpose_legal_act_rus',
+        'documents_submitted_for_expertise_rus',
+        'documents_submitted_for_expertise_kaz',
+        'subject_and_goals_expertise_rus',
+        'subject_and_goals_expertise_kaz',
+        'full_name_rus',
+        'full_name_kaz',
+        'job_title_rus',
+        'job_title_kaz',
+
     ];
 }
