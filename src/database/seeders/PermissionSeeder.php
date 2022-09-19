@@ -46,8 +46,7 @@ class PermissionSeeder extends Seeder
             ], [
                 'slug' => 'posts-show',
                 'name' => 'Posts show'
-            ],
-            [
+            ], [
                 'slug' => 'projects-store',
                 'name' => 'Projects store'
             ], [

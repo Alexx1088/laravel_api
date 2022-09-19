@@ -25,7 +25,7 @@ class ProjectService
     public function destroy($project)
     {
         return DB::transaction(function () use ($project){
-            $project->destroy();
+            $project->delete();
         });
     }
 }

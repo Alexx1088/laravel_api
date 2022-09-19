@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAddProjectsTable extends Migration
+class CreateProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -21,22 +21,22 @@ class CreateAddProjectsTable extends Migration
             $table->dateTime('date_of_outgoing_letter');
             $table->dateTime('date_of_receipt_project_legal_act');
             $table->string('document_type');
-            $table->string('project_act_name_rus');
-            $table->string('project_act_name_kaz');
+            $table->string('project_act_name_ru');
+            $table->string('project_act_name_kk');
             $table->string('branch of legislation');
-            $table->string('purpose_legal_act_rus');
-            $table->string('documents_submitted_for_expertise_rus');
-            $table->string('documents_submitted_for_expertise_kaz');
-            $table->string('subject_and_goals_expertise_rus');
-            $table->string('subject_and_goals_expertise_kaz');
+            $table->string('purpose_legal_act_ru');
+            $table->string('documents_submitted_for_expertise_ru');
+            $table->string('documents_submitted_for_expertise_kk');
+            $table->string('subject_and_goals_expertise_ru');
+            $table->string('subject_and_goals_expertise_kk');
             $table->integer('number_of_pages');
             $table->string('dev_group');
             $table->string('email')->unique();
             $table->string('comment');
-            $table->string('full_name_rus');
-            $table->string('full_name_kaz');
-            $table->string('job_title_rus');
-            $table->string('job_title_kz');
+            $table->string('full_name_ru');
+            $table->string('full_name_kk');
+            $table->string('job_title_ru');
+            $table->string('job_title_kk');
             $table->bigInteger('phone');
 
             $table->softDeletes();
