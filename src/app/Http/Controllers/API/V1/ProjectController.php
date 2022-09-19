@@ -16,6 +16,7 @@ use App\Services\V1\ProjectService;
 
 use App\Models\Project;
 use App\Services\V1\RoleService;
+use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
@@ -35,5 +36,29 @@ class ProjectController extends Controller
         return ProjectResource::collection($projects);
     }
 
+    public function show(Project $project)
+    {
+        return new ProjectResource($project);
+    }
 
+    public function store(ProjectStoreRequest $request)
+    {
+        $project = $this->service->store($request);
+
+        return response()->json(new ProjectResource($project), 201);
+    }
+
+    public function update(ProjectStoreRequest $request, Project $project)
+    {
+        $this->service->update($request, $project);
+
+        return new ProjectResource($project);
+    }
+
+    public function destroy(Project $project)
+    {
+        $this->service->destroy($project);
+
+        return response()->json(null, 204);
+    }
 }
