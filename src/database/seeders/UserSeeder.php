@@ -25,7 +25,44 @@ class UserSeeder extends Seeder
         		'permissions' => [
         			'users-store'
         		]
-        	]
+        	],
+            [
+                'name' => 'Gulshat',
+                'email' => 'gulshat@yandex.ru',
+                'username' => 'gulshat.shayakhmet',
+                'password' => bcrypt('secret'),
+                'permissions' => [
+                    'projects-store'
+                ]
+           ] ,
+                ['name' => 'Galiya',
+                    'email' => 'galiya@yandex.ru',
+                    'username' => 'galiya.daukenova',
+                    'password' => bcrypt('parol'),
+                    'permissions' => [
+                        'projects-index']
+                ],
+            ['name' => 'Nazira',
+                'email' => 'nazira@yandex.ru',
+                'username' => 'nazira.tenelbay',
+                'password' => bcrypt('parol1'),
+                'permissions' => [
+                    'projects-index']
+            ],
+            ['name' => 'Aygerim',
+                'email' => 'aygerim@yandex.ru',
+                'username' => 'aygerim.omarova',
+                'password' => bcrypt('parol2'),
+                'permissions' => [
+                    'projects-index']
+            ],
+
+
+
+
+
+
+
         ];
 
         for ($i = 0; $i < count($users); $i++) { 
