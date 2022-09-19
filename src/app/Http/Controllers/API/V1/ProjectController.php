@@ -17,18 +17,14 @@ class ProjectController extends Controller
         return response()->json(ProjectResource::collection(Project::all()), 200);
     }
 
-    public function show($id)
+    public function show(Project $project)
     {
-        return new ProjectResource(Project::findOrFail($id));
+     //   return new ProjectResource(Project::findOrFail($project));
+   //  return new ProjectResource($project);
     }
 
     public function store(ProjectStoreRequest $request)
     {
-
-        $request->validate([
-
-            'locale' => ['required', Rule::in(['kk', 'ru',]),],
-        ]);
 
         Project::create($request->validated());
 
