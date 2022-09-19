@@ -21,6 +21,12 @@ class UserController extends Controller
 	{
 		$users = User::query();
 
+        if ($request->has('filter.role.slug')) {
+            $users->whereHas('roles', function ($query) use ($request) {
+                $query->where('slug', explode(', ', $request->filter['role']['slug']));
+            });
+        }
+
 		$users = $users->paginate();
 
 		return UserResource::collection($users);
