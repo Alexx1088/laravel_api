@@ -26,7 +26,7 @@ class ProjectStoreRequest extends FormRequest
         return [
 
             're_examination' => 'required|string',
-            'incoming_letter_number' => 'required|integer',
+            'incoming_letter_number' => 'required|string',
             'outgoing_letter_number' => 'required|integer',
             'date_of_outgoing_letter' => 'required|date',
             'date_of_receipt_project_legal_act' => 'required|date',
