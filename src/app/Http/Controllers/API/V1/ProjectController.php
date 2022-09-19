@@ -4,6 +4,8 @@ namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\Controller;
 
+use App\Repositories\V1\ProjectRepository;
+
 use App\Http\Requests\V1\ProjectStoreRequest;
 use App\Http\Requests\V1\ProjectUpdateRequest;
 
@@ -17,16 +19,20 @@ use App\Services\V1\RoleService;
 
 class ProjectController extends Controller
 {
+    protected $repository;
     protected $service;
 
-    public function __construct(ProjectService $service)
+    public function __construct(ProjectService $service, ProjectRepository $repository)
     {
+        $this->repository = $repository;
         $this->service = $service;
     }
 
     public function index(Request $request)
     {
-        return response()->json(ProjectResource::collection(Project::all()), 200);
+        $projects = $this->repository->paginate($request);
+
+        return ProjectResource::collection($projects);
     }
 
 
