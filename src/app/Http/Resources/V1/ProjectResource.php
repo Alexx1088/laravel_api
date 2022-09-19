@@ -45,6 +45,10 @@ class ProjectResource extends JsonResource
             'full_name_kk' => $this->full_name_kk,
             'job_title_ru' => $this->job_title_ru,
             'job_title_kk' => $this->job_title_kk,
+            'coordinator' => $this->coordinator,
+            'corrector' => $this->corrector,
+            'interpreter' => $this->interpreter,
+             'expert' => $this->expert,
         ];
     }
 }

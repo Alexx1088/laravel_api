@@ -57,7 +57,7 @@ class ProjectController extends Controller
 
     public function destroy(Project $project)
     {
-        $this->service->destroy($project);
+         $this->service->destroy($project);
 
         return response()->json(null, 204);
     }

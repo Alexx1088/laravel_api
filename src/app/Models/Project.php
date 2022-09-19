@@ -38,5 +38,9 @@ class Project extends Model
         'full_name_kk',
         'job_title_ru',
         'job_title_kk',
+        'coordinator',
+        'corrector',
+        'interpreter',
+        'expert',
     ];
 }
