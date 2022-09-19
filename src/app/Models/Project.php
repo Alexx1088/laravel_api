@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
 
+use App\Traits;
+
 class Project extends Model
 {
-    use HasFactory, HasApiTokens;
+    use HasFactory, HasApiTokens, Translationable;
 
     protected $fillable = [
         're_examination',
@@ -24,17 +26,16 @@ class Project extends Model
         'comment',
         'phone',
         'locale',
-        'project_act_name_rus',
-        'project_act_name_kaz',
-        'purpose_legal_act_rus',
-        'documents_submitted_for_expertise_rus',
-        'documents_submitted_for_expertise_kaz',
-        'subject_and_goals_expertise_rus',
-        'subject_and_goals_expertise_kaz',
-        'full_name_rus',
-        'full_name_kaz',
-        'job_title_rus',
-        'job_title_kaz',
-
+        'project_act_name_ru',
+        'project_act_name_kk',
+        'purpose_legal_act_ru',
+        'documents_submitted_for_expertise_ru',
+        'documents_submitted_for_expertise_kk',
+        'subject_and_goals_expertise_ru',
+        'subject_and_goals_expertise_kk',
+        'full_name_ru',
+        'full_name_kk',
+        'job_title_ru',
+        'job_title_kk',
     ];
 }
