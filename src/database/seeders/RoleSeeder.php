@@ -16,19 +16,19 @@ class RoleSeeder extends Seeder
     {
         $roles = [
             [
-                'slug' => 'admin',
-                'name' => 'Admin'
+                'slug' => 'administrator',
+                'name' => 'Администратор'
             ], [
-                'slug' => 'корректор',
+                'slug' => 'corrector',
                 'name' => 'Корректор'
-            ],
-            ['slug' => 'эксперт',
+            ], [
+                'slug' => 'expert',
                 'name' => 'Эксперт'
-            ],
-            ['slug' => 'переводчик',
+            ], [
+                'slug' => 'interpreter',
                 'name' => 'Переводчик'
-            ],
-            ['slug' => 'координатор',
+            ], [
+                'slug' => 'coordinator',
                 'name' => 'Координатор'
             ],
         ];
