@@ -24,7 +24,6 @@ class ProjectStoreRequest extends FormRequest
     public function rules()
     {
         return [
-
             're_examination' => 'required|string',
             'incoming_letter_number' => 'required|string',
             'outgoing_letter_number' => 'required|integer',
@@ -38,18 +37,17 @@ class ProjectStoreRequest extends FormRequest
             'phone' => 'required|integer|digits_between:6,15',
             'branch_of_legislation' => 'required|string',
             'locale' => 'string',
-            'project_act_name_rus' => 'required|string',
-            'project_act_name_kaz' => 'required|string',
-            'purpose_legal_act_rus' => 'required|string',
-            'documents_submitted_for_expertise_rus' => 'required|string',
-            'documents_submitted_for_expertise_kaz' => 'required|string',
-            'subject_and_goals_expertise_rus' => 'required|string',
-            'subject_and_goals_expertise_kaz' => 'required|string',
-            'full_name_rus' => 'required|string',
-            'full_name_kaz' => 'required|string',
-            'job_title_rus' => 'required|string',
-            'job_title_kaz' => 'required|string',
-
+            'project_act_name_ru' => 'required|string',
+            'project_act_name_kk' => 'required|string',
+            'purpose_legal_act_ru' => 'required|string',
+            'documents_submitted_for_expertise_ru' => 'required|string',
+            'documents_submitted_for_expertise_kk' => 'required|string',
+            'subject_and_goals_expertise_ru' => 'required|string',
+            'subject_and_goals_expertise_kk' => 'required|string',
+            'full_name_ru' => 'required|string',
+            'full_name_kk' => 'required|string',
+            'job_title_ru' => 'required|string',
+            'job_title_kk' => 'required|string',
         ];
     }
 }
