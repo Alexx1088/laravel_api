@@ -27,7 +27,7 @@ class ProjectController extends Controller
 
         $request->validate([
 
-            'locale' => ['required', Rule::in(['kk', 'ru', 'en']),],
+            'locale' => ['required', Rule::in(['kk', 'ru',]),],
         ]);
 
         Project::create($request->validated());
