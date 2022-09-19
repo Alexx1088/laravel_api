@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\Translationable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;

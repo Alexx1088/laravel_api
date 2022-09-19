@@ -32,17 +32,19 @@ class ProjectResource extends JsonResource
             'comment' => $this->comment,
             'phone' => $this->phone,
             'locale' => $this->locale,
-            'project_act_name_rus' => $this->project_act_name_rus,
-            'project_act_name_kaz' => $this->project_act_name_kaz,
-            'purpose_legal_act_rus' => $this->purpose_legal_act_rus,
-            'documents_submitted_for_expertise_rus' => $this->documents_submitted_for_expertise_rus,
-            'documents_submitted_for_expertise_kaz' => $this->documents_submitted_for_expertise_kaz,
-            'subject_and_goals_expertise_rus' => $this->subject_and_goals_expertise_rus,
-            'subject_and_goals_expertise_kaz' => $this->subject_and_goals_expertise_kaz,
-            'full_name_rus' => $this->full_name_rus,
-            'full_name_kaz' => $this->full_name_kaz,
-            'job_title_rus' => $this->job_title_rus,
-            'job_title_kaz' => $this->job_title_kaz,
+            'project_act_name_ru' => $this->project_act_name_ru,
+            'project_act_name_kk' => $this->project_act_name_kk,
+            'purpose_legal_act_ru' => $this->purpose_legal_act_ru,
+            'documents_submitted_for_expertise_ru' =>
+                $this->documents_submitted_for_expertise_ru,
+            'documents_submitted_for_expertise_kk' =>
+                $this->documents_submitted_for_expertise_kk,
+            'subject_and_goals_expertise_ru' => $this->subject_and_goals_expertise_ru,
+            'subject_and_goals_expertise_kk' => $this->subject_and_goals_expertise_kk,
+            'full_name_ru' => $this->full_name_ru,
+            'full_name_kk' => $this->full_name_kk,
+            'job_title_ru' => $this->job_title_ru,
+            'job_title_kk' => $this->job_title_kk,
         ];
     }
 }
