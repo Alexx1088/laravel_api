@@ -28,11 +28,11 @@ Route::group(['namespace' => 'API'], function () {
 
             	   		//	Users
 
-			Route::get('users', 'ProjectController@index')->middleware(['permission:users-index']);
-			Route::get('users/{user}', 'ProjectController@show')->middleware(['permission:users-show']);
-			Route::post('users', 'ProjectController@store')->middleware(['permission:users-store']);
-			Route::put('users/{user}', 'ProjectController@update')->middleware(['permission:users-update']);
-			Route::delete('users/{user}', 'ProjectController@destroy')->middleware(['permission:users-destroy']);
+			Route::get('users', 'UserController@index')->middleware(['permission:users-index']);
+			Route::get('users/{user}', 'UserController@show')->middleware(['permission:users-show']);
+			Route::post('users', 'UserController@store')->middleware(['permission:users-store']);
+			Route::put('users/{user}', 'UserController@update')->middleware(['permission:users-update']);
+			Route::delete('users/{user}', 'UserController@destroy')->middleware(['permission:users-destroy']);
 
              // Projects
            Route::post('projects', 'ProjectController@store')->middleware(['permission:projects-index']);
