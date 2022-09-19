@@ -48,6 +48,10 @@ class ProjectStoreRequest extends FormRequest
             'full_name_kk' => 'required|string',
             'job_title_ru' => 'required|string',
             'job_title_kk' => 'required|string',
+            'coordinator' => 'nullable',
+            'corrector' => 'nullable',
+            'interpreter' => 'nullable',
+            'expert' => 'nullable',
 
         ];
     }
