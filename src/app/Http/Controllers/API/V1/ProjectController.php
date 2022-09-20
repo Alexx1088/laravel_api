@@ -48,7 +48,7 @@ class ProjectController extends Controller
         return response()->json(new ProjectResource($project), 201);
     }
 
-    public function update(ProjectStoreRequest $request, Project $project)
+    public function update(ProjectUpdateRequest $request, Project $project)
     {
         $this->service->update($request, $project);
 
