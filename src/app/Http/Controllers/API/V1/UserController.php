@@ -19,16 +19,18 @@ class UserController extends Controller
 {
 	public function index(UserIndexRequest $request)
 	{
+     //   dd($request->all());
 		$users = User::query();
 
         if ($request->has('filter.role.slug')) {
+
             $users->whereHas('roles', function ($query) use ($request) {
-                $query->where('slug', explode(', ', $request->filter['role']['slug']));
+                $query->whereIn('slug', explode(', ', $request->filter['role']['slug']));
+                
             });
         }
 
 		$users = $users->paginate();
-
 		return UserResource::collection($users);
 	}
 
