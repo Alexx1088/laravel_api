@@ -19,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\TestController::class, 'index']);
 
-Route::get('/testo', [\App\Http\Controllers\TestController::class, 'show'])
-    ->name('testo');
+Route::get('/test', [\App\Http\Controllers\TestController::class, 'show'])
+    ->name('test');
